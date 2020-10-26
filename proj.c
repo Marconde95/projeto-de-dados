@@ -5,7 +5,14 @@
 int main(){
     FILE *pont_arq;
     pont_arq = fopen("netflix_titles.csv", "r");
-    printf("sim\n");
+    if (pont_arq == NULL)
+    {
+        printf("ERRO! O arquivo não foi aberto!\n");
+    }
+    else
+    {
+        printf("O arquivo foi aberto com sucesso!\n");
+    }
 
     return 0;
 }
